@@ -15,8 +15,10 @@ function order(...drinks) {
         break;
     }
     sum += price;
-    str += drinks[i] + " " + price + "<br>" + "Сумма:" + sum;
+    str += drinks[i] + " " + price + "<br>";
   }
+
+  str += "Сумма:" + sum;
   return str;
 }
 document.write(order(drink, drink));
