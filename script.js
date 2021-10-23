@@ -1,25 +1,22 @@
-let s = prompt("количество напитков");
-function order(drink,s) { 
-    for (let i=0; i<s;i++){
-    let str = "Ваш заказ: ";
-    let m = "Сумма"
-    switch (drink) {
+let drink = prompt("заказ");
+let drinks = ["эспрессо", "капучино"];
+let str = "Ваш заказ: ";
+let sum = 0;
+function order(...drinks) {
+  for (let i = 0; i < drinks.length; i++) {
+    switch (drinks[i]) {
       case "эспрессо":
-        str += "эспрессо" ;
-        m += 20 ;
+        price = 20;
         break;
       case "капучино":
-        str += "капучино";
-        m+=25;
-        return m ;
+        price = 24;
         break;
       default:
         break;
     }
-    return str+m;
+    sum += price;
+    str += drinks[i] + " " + price + "<br>" + "Сумма:" + sum;
   }
+  return str;
 }
-
-  n = prompt("введите ваш заказ")
-  const myOrder = order(n,s);
-document.write(myOrder);
+document.write(order(drink, drink));
