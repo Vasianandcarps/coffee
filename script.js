@@ -1,8 +1,9 @@
 let drink = prompt("заказ");
 let drinks = ["эспрессо", "капучино"];
 let str = "Ваш заказ: ";
-let sum = 0;
+
 function order(...drinks) {
+  let sum = 0;
   for (let i = 0; i < drinks.length; i++) {
     switch (drinks[i]) {
       case "эспрессо":
